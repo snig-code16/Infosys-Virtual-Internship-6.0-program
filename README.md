@@ -41,7 +41,6 @@ Welcome to the comprehensive technical documentation of my Infosys Springboard V
 I implemented a Multi-Layer Perceptron (MLP) aimed at understanding dense layer interactions.
 
 *   **Optimizer:** `RMSprop` (Root Mean Square Propagation)
-*   **Loss Function:** `BinaryCrossentropy`
 *   **Metrics:** Accuracy
 
 <details>
@@ -64,20 +63,8 @@ model = Sequential([
 I upgraded to a CNN to leverage spatial hierarchies in image data, significantly improving accuracy.
 
 *   **Optimizer:** `Adam` (Adaptive Moment Estimation)
-*   **Loss Function:** `sparse_categorical_crossentropy`
 *   **Batch Normalization:** Applied after convolutions to stabilize learning.
 
-```mermaid
-graph LR
-    Input[Input 28x28x1] --> C1[Conv2D 32 (3x3)]
-    C1 --> BN1[Batch Norm] --> R1[ReLU]
-    R1 --> C2[Conv2D 64 (3x3)]
-    C2 --> BN2[Batch Norm] --> R2[ReLU]
-    R2 --> MP1[MaxPooling2D]
-    MP1 --> C3[Conv2D 128 (3x3)]
-    C3 --> BN3[Batch Norm] --> R3[ReLU]
-    R3 --> F[Flatten] --> D1[Dense Output 10]
-```
 
 ---
 
